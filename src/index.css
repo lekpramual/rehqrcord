@@ -1,0 +1,25 @@
+.logo {
+  height: 32px;
+  margin: 16px;
+  /* background: rgba(255, 255, 255, 0.2); */
+  background: #141414;
+}
+
+
+.site-layout-sub-header-background {
+  background: #fff;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+.site-page-header {
+  background: #fff;
+}
+[data-theme="dark"] .site-layout-sub-header-background {
+  background: #141414;
+}
+[data-theme="light"] .site-layout-sub-header-background {
+  background: #fff;
+}
