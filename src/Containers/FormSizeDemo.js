@@ -6,8 +6,6 @@ import {
   Radio,
   Select,
   DatePicker,
-  InputNumber,
-  TreeSelect,
   Switch,
   Breadcrumb
 } from "antd";

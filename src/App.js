@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import { Route, Redirect, Switch as Switchs, Link } from "react-router-dom";
-import { Layout, Menu, Avatar, PageHeader, Switch } from "antd";
+import {
+  Route,
+  Redirect,
+  Switch as Switchs,
+  Link,
+  useLocation
+} from "react-router-dom";
+import { Layout, Menu, Avatar, Switch } from "antd";
 import {
   UploadOutlined,
   UserOutlined,
@@ -23,15 +29,14 @@ const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
-const App = (props) => {
-  const [status, setStatus] = useState(null);
+const App = () => {
+  const location = useLocation();
   const [theme, setTheme] = useState("light");
 
   const changeTheme = (value) => {
     console.log(value);
     setTheme(value ? "dark" : "light");
   };
-
 
   return (
     <Layout style={{ minHeight: "100vh", marginTop: "-10px" }}>
@@ -50,14 +55,19 @@ const App = (props) => {
         }}
       >
         <div className="logo" theme={theme} />
-        <Menu theme={theme} mode="inline" defaultSelectedKeys={["1"]}>
-          <Menu.Item key="1" icon={<HomeOutlined />}>
+        <Menu
+          theme={theme}
+          mode="inline"
+          // defaultSelectedKeys={["2"]}
+          selectedKeys={[location.pathname]}
+        >
+          <Menu.Item key="/home" icon={<HomeOutlined />}>
             <Link to="/home">หน้าแรก</Link>
           </Menu.Item>
-          <Menu.Item key="2" icon={<UploadOutlined />}>
+          <Menu.Item key="/register" icon={<UploadOutlined />}>
             <Link to="/register">ลงทะเบียน</Link>
           </Menu.Item>
-          <Menu.Item key="3" icon={<ScanOutlined />}>
+          <Menu.Item key="/scan" icon={<ScanOutlined />}>
             <Link to="/scan">สแกน</Link>
           </Menu.Item>
         </Menu>
@@ -71,10 +81,11 @@ const App = (props) => {
             // style={{ textAlign: "center" }}
             theme={theme}
             mode="horizontal"
-            defaultSelectedKeys={["1"]}
+            // defaultSelectedKeys={["2"]}
+            selectedKeys={[location.pathname]}
           >
-            <Menu.Item key="1">
-              <UserOutlined /> หน้าแรก
+            <Menu.Item key="/home" icon={<HomeOutlined />}>
+              <Link to="/home">หน้าแรก</Link>
             </Menu.Item>
             {/* <Menu.Item key="2">nav 2</Menu.Item>
             <Menu.Item key="3">nav 3</Menu.Item> */}
@@ -117,7 +128,7 @@ const App = (props) => {
           </Switchs>
         </Content>
         <Footer style={{ textAlign: "center" }}>
-          Ant Design ©2018 Created by Ant UED
+          Roi et hospital ©2021 Created by Comcenter
         </Footer>
       </Layout>
     </Layout>

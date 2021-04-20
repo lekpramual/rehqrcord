@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-// import { withRouter } from "react-router-dom";
-import { Button, Row, Col, Breadcrumb, Typography, Space } from "antd";
+import React from "react";
+import { withRouter } from "react-router-dom";
+import { Button, Row, Col, Breadcrumb } from "antd";
 // import { isMobile } from "react-device-detect";
 import { Link } from "react-router-dom";
 
@@ -9,19 +9,8 @@ import queryString from "query-string";
 import QrScan from "react-qr-reader";
 import { geolocated } from "react-geolocated";
 
-const { Text } = Typography;
-
-function ScanInOut(props) {
-  const qs = queryString.parse(props.location.search);
-  const [qrscan, setQrscan] = useState("No result");
-  const handleScan = (data) => {
-    if (data) {
-      setQrscan(data);
-    }
-  };
-  const handleError = (err) => {
-    console.error(err);
-  };
+function ScanInOut(location, props) {
+  const qs = queryString.parse(location.search);
 
   return (
     <>
@@ -56,42 +45,29 @@ function ScanInOut(props) {
                   {qs["q"] === "checkin" ? "สแกนเข้า" : "สแกนออก"}
                 </Button>
               </Col>
-            </Row>
-            <Row>
               <Col span={12}>
                 <Button type="dashed" block>
-                  <ScanOutlined /> Latitude : {props.coords.latitude.toFixed(2)}
+                  <ScanOutlined /> Latitude : {props.coords.latitude}
                 </Button>
               </Col>
               <Col span={12}>
                 <Button type="dashed" block>
-                  <ScanOutlined /> Longitude :{" "}
-                  {props.coords.longitude.toFixed(2)}
+                  <ScanOutlined /> Longitude : {props.coords.longitude}
                 </Button>
               </Col>
             </Row>
             <Row>
               <Col span={24}>
-                <Button type="dashed" style={{ height: "100%" }} block>
-                  <QrScan
-                    delay={300}
-                    onError={handleError}
-                    onScan={handleScan}
-                    // style={{ height: 240, width: 320 }}
-                  />
-                </Button>
-              </Col>
-            </Row>
-            <Row>
-              <Col span={24} style={{ textAlign: "center" }}>
-                <Space direction="horizontal">
-                  <Text type="secondary">{qrscan}</Text>
-                </Space>
+                <Button
+                  type="dashed"
+                  style={{ height: "300px" }}
+                  block
+                ></Button>
               </Col>
             </Row>
           </>
         ) : (
-          <div>กำลังค้นหาตำแหน่ง &hellip; </div>
+          <div>Getting the location data&hellip; </div>
         )}
       </div>
     </>
