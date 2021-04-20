@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/rehqrcord/static/css/main.a77c21fe.chunk.css",
-    "main.js": "/rehqrcord/static/js/main.0c9f50b0.chunk.js",
-    "main.js.map": "/rehqrcord/static/js/main.0c9f50b0.chunk.js.map",
+    "main.js": "/rehqrcord/static/js/main.0518f84a.chunk.js",
+    "main.js.map": "/rehqrcord/static/js/main.0518f84a.chunk.js.map",
     "runtime-main.js": "/rehqrcord/static/js/runtime-main.5de636c6.js",
     "runtime-main.js.map": "/rehqrcord/static/js/runtime-main.5de636c6.js.map",
     "static/css/2.45f96635.chunk.css": "/rehqrcord/static/css/2.45f96635.chunk.css",
-    "static/js/2.4e201e7e.chunk.js": "/rehqrcord/static/js/2.4e201e7e.chunk.js",
-    "static/js/2.4e201e7e.chunk.js.map": "/rehqrcord/static/js/2.4e201e7e.chunk.js.map",
+    "static/js/2.663acaf8.chunk.js": "/rehqrcord/static/js/2.663acaf8.chunk.js",
+    "static/js/2.663acaf8.chunk.js.map": "/rehqrcord/static/js/2.663acaf8.chunk.js.map",
     "index.html": "/rehqrcord/index.html",
     "static/css/2.45f96635.chunk.css.map": "/rehqrcord/static/css/2.45f96635.chunk.css.map",
     "static/css/main.a77c21fe.chunk.css.map": "/rehqrcord/static/css/main.a77c21fe.chunk.css.map",
-    "static/js/2.4e201e7e.chunk.js.LICENSE.txt": "/rehqrcord/static/js/2.4e201e7e.chunk.js.LICENSE.txt"
+    "static/js/2.663acaf8.chunk.js.LICENSE.txt": "/rehqrcord/static/js/2.663acaf8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5de636c6.js",
     "static/css/2.45f96635.chunk.css",
-    "static/js/2.4e201e7e.chunk.js",
+    "static/js/2.663acaf8.chunk.js",
     "static/css/main.a77c21fe.chunk.css",
-    "static/js/main.0c9f50b0.chunk.js"
+    "static/js/main.0518f84a.chunk.js"
   ]
 }
