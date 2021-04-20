@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/rehqrcord/static/css/main.a77c21fe.chunk.css",
-    "main.js": "/rehqrcord/static/js/main.0518f84a.chunk.js",
-    "main.js.map": "/rehqrcord/static/js/main.0518f84a.chunk.js.map",
+    "main.js": "/rehqrcord/static/js/main.5f588851.chunk.js",
+    "main.js.map": "/rehqrcord/static/js/main.5f588851.chunk.js.map",
     "runtime-main.js": "/rehqrcord/static/js/runtime-main.5de636c6.js",
     "runtime-main.js.map": "/rehqrcord/static/js/runtime-main.5de636c6.js.map",
     "static/css/2.45f96635.chunk.css": "/rehqrcord/static/css/2.45f96635.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.45f96635.chunk.css",
     "static/js/2.663acaf8.chunk.js",
     "static/css/main.a77c21fe.chunk.css",
-    "static/js/main.0518f84a.chunk.js"
+    "static/js/main.5f588851.chunk.js"
   ]
 }
